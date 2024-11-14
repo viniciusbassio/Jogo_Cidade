@@ -1,9 +1,9 @@
 package com.example.Jogo_Cidade.controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.stereotype.Controller;
 
-@Controller
+@RestController
 public class CidadeController {
     @GetMapping("/Cadastro_edificio")
     public ModelAndView RotaCadastro(){
