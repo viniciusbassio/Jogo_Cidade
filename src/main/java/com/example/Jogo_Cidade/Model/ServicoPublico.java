@@ -1,18 +1,15 @@
-package com.example.Jogo_Cidade.Model;
+package com.example.Jogo_Cidade.model;
 
-// import jakarta.persistence.Entity;
-// import jakarta.persistence.GeneratedValue;
-// import jakarta.persistence.GenerationType;
-// import jakarta.persistence.Id;
+import jakarta.persistence.*;
 public class ServicoPublico extends Edificio {
     private String tipoServico;
     private int capacidadeAtendimento;
 
-    // public ServicoPublico(String nome, String tipoServico, int capacidadeAtendimento, Nivel nivel) {
-    //     super(nome, "Serviço Público", nivel);
-    //     this.tipoServico = tipoServico;
-    //     this.capacidadeAtendimento = capacidadeAtendimento;
-    // }
+    public ServicoPublico(String nome, String tipoServico, int capacidadeAtendimento, Nivel nivel) {
+        super(nome, "Serviço Público", nivel);
+        this.tipoServico = tipoServico;
+        this.capacidadeAtendimento = capacidadeAtendimento;
+    }
 
     @Override
     public String toString() {

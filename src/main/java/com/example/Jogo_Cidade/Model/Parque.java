@@ -1,17 +1,15 @@
- package com.example.Jogo_Cidade.Model;
+ package com.example.Jogo_Cidade.model;
 
-// import jakarta.persistence.Entity;
-// import jakarta.persistence.GeneratedValue;
-// import jakarta.persistence.GenerationType;
-// import jakarta.persistence.Id;
-// @Entity
+import jakarta.persistence.*;
+
+@Entity
 public class Parque extends Edificio {
     private int areaVerde;
 
-    // public Parque(String nome, int areaVerde, Nivel nivel) {
-    //     super(nome, "Parque", nivel);
-    //     this.areaVerde = areaVerde;
-    // }
+    public Parque(String nome, int areaVerde, Nivel nivel) {
+        super(nome, "Parque", nivel);
+        this.areaVerde = areaVerde;
+    }
 
     @Override
     public String toString() {

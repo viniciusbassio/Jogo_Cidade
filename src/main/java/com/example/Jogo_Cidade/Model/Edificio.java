@@ -1,68 +1,65 @@
- package com.example.Jogo_Cidade.Model;
+ package com.example.Jogo_Cidade.model;
 
-// import com.example.Jogo_Cidade.Cidade;
-// import jakarta.persistence.Entity;
-// import jakarta.persistence.GeneratedValue;
-// import jakarta.persistence.GenerationType;
-// import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
-// @Entity
+@Entity
  public class Edificio {
-//     @Id
-//     @GeneratedValue(strategy=GenerationType.AUTO)
-//     private String nome;
-//     private String tipo;
-//     private Nivel nivel;
+    @Column(name = "Nome_Edificio")
+    private String nome;
+    @Column (name ="Tipo_Edificio")
+    private String tipo;
+    private Nivel nivel;
 
     
-//     private Cidade cidade;
+     private Cidade cidade;
 
-//     public enum Nivel {
-//         BAIXO(10000), MEDIO(20000), ALTO(50000);
+     public enum Nivel {
+         BAIXO(10000), MEDIO(20000), ALTO(50000);
+         private final double custo;
 
-//         private final double custo;
+         Nivel(double custo) {
+             this.custo = custo;
+        }
 
-//         Nivel(double custo) {
-//             this.custo = custo;
-//         }
+         public double getCusto() {
+             return custo;
+         }
+     }
 
-//         public double getCusto() {
-//             return custo;
-//         }
-//     }
+    public Edificio(String nome, String tipo, Nivel nivel) {
+        
+        this.nome = nome;
+        this.tipo = tipo;
+        this.nivel = nivel;
+    }
 
-//     public Edificio(String nome, String tipo, Nivel nivel) {
-//         this.nome = nome;
-//         this.tipo = tipo;
-//         this.nivel = nivel;
-//     }
+    public String getNome() {
+       
+        return nome;
+    }
 
-//     public String getNome() {
-//         return nome;
-//     }
+    public String getTipo() {
+        return tipo;
+    }
 
-//     public String getTipo() {
-//         return tipo;
-//     }
+    public Nivel getNivel() {
+        return nivel;
+    }
 
-//     public Nivel getNivel() {
-//         return nivel;
-//     }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-//     public void setNome(String nome) {
-//         this.nome = nome;
-//     }
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 
-//     public void setTipo(String tipo) {
-//         this.tipo = tipo;
-//     }
+    public void setNivel(Nivel nivel) {
+        this.nivel = nivel;
+    }
 
-//     public void setNivel(Nivel nivel) {
-//         this.nivel = nivel;
-//     }
-
-//     @Override
-//     public String toString() {
-//         return nome + " (" + tipo + ", Nível: " + nivel + ")";
-//     }
+    @Override
+    public String toString() {
+        return nome + " (" + tipo + ", Nível: " + nivel + ")";
+    }
  }

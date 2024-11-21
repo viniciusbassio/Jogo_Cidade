@@ -1,12 +1,10 @@
-package com.example.Jogo_Cidade.Model;
-// import jakarta.persistence.Entity;
-// import jakarta.persistence.GeneratedValue;
-// import jakarta.persistence.GenerationType;
-// import jakarta.persistence.Id;
-// @Entity
+package com.example.Jogo_Cidade.model;
+import jakarta.persistence.*;
+@Entity
+@Table(name = "cidades")
 public class Cidade {
-   // @Id
-    //@GeneratedValue(strategy=GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private double orcamento;
     private int recursos;
@@ -48,4 +46,6 @@ public class Cidade {
         }
     }
 }
+
+
 
